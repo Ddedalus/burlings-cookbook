@@ -1,0 +1,77 @@
+\documentclass[%
+a4paper,
+%twoside,
+11pt
+]{article}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+\usepackage{nicefrac}
+
+\usepackage[
+    % handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Magdalena Przybyła, Hubert Bereś},
+    pdftitle             = {Bethan's and Hugh's cookbook},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\begin{document}
+
+\title{Bethan's and Hugh's cookbook}
+\author{Magdalena Przybyła, Hubert Bereś}
+\maketitle
+
+\begin{abstract}
+    Some initial blah blah.
+\end{abstract}
+
+\tableofcontents
+
+\vspace{5em}
+
+\section{Basic recipes}
+A bit more of initial blah blah.
+
+\include{tex/basic_recipe_1}
+
+\section{Fancy recipes}
+A bit more involved.
+
+\include{tex/fancy_recipe_1}
+
+\end{document} 
