@@ -1,5 +1,5 @@
 # bethans-cookbook
-The ultimate survival guide for cooking as a family (serves up to 8) and some secrets. Crafted with love by H&amp;M.
+The ultimate survival guide for cooking as a family (serves up to 8) and some secrets. Crafted with love by Magbert.
 
 # Contributing guide
 # Accessing the code
