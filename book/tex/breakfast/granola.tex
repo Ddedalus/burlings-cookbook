@@ -1,9 +1,16 @@
+\begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-0.9in,yshift=-0.9in,anchor=north east] at (current page.north east){%
+    \includegraphics[width=7cm]{pic/granola}};
+\end{tikzpicture}
+
+
 \begin{recipe}
     [% 
         preparationtime = {\unit[15]{min}},
         bakingtime = {\unit[30]{min}}
     ]
     {Granola}
+    \prerecipeoverview{\vspace{1cm}}
 
     \introduction{%
         There's nothing better than a quick home-made breakfast.
