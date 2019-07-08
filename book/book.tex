@@ -1,16 +1,17 @@
 \documentclass[%
-a4paper,
-%twoside,
+twoside,
 11pt
 ]{article}
+\usepackage[b5paper, margin=0.9in]{geometry} 
 
 % encoding, font, language
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{dirtytalk}
 
-\usepackage{nicefrac}
+\usepackage[tight, nice]{units}
 
 \usepackage[
     % handwritten,
@@ -28,6 +29,21 @@ a4paper,
 }
 \renewcommand{\subsectionmark}[1]
 {% no implementation to display the section name instead
+}
+
+% fix from https://tex.stackexchange.com/a/445886/
+\renewcommand{\step}
+{%
+    \stepcounter{step}%
+    \lettrine
+    [%
+        lines=2,
+        lhang=0,          % space into margin, value between 0 and 1
+        loversize=0.15,   % enlarges the height of the capital
+        slope=0em,
+        findent=1em,      % gap between capital and intended text
+        nindent=0em       % shifts all intended lines, begining with the second line
+    ]{\thestep}{}%
 }
 
 \usepackage{hyperref}    % must be the last package
@@ -111,6 +127,40 @@ a4paper,
 \include{tex/soups/tomato_pepper_cream}
 \newpage
 
+
+\section{Dinner}
+
+\include{tex/dinner/chicken_breast_coconut}
+\newpage
+\include{tex/dinner/curry_sweet_potato}
+\newpage
+\include{tex/dinner/beetroot_goat_tart}
+\newpage
+\include{tex/dinner/ragu_sauce}
+\newpage
+\include{tex/dinner/pork_loin}
+\newpage
+\include{tex/dinner/plackizcukinii}
+\newpage
+\include{tex/dinner/trout}
+\newpage
+\include{tex/dinner/pizza_dough}
+\newpage
+\include{tex/dinner/dumplings} % must go after pizza
+\newpage
+\include{tex/dinner/stuffed_aubergines}
+\newpage
+\include{tex/dinner/patties}
+\newpage
+\include{tex/dinner/lasagne}
+\newpage
+\include{tex/dinner/carrot_kopytka}
+\newpage
+\include{tex/dinner/galette}
+\newpage
+\include{tex/dinner/krokiety}
+\newpage
+
 \section{Desserts}
 \include{tex/desserts/brownie}
 \newpage
@@ -129,38 +179,6 @@ a4paper,
 \include{tex/desserts/tofurnik}
 \newpage
 
-\section{Dinner}
-
-\include{tex/dinner/beetroot_goat_tart}
-\newpage
-\include{tex/dinner/carrot_kopytka}
-\newpage
-\include{tex/dinner/chicken_breast_coconut}
-\newpage
-\include{tex/dinner/curry_sweet_potato}
-\newpage
-\include{tex/dinner/galette}
-\newpage
-\include{tex/dinner/krokiety}
-\newpage
-\include{tex/dinner/lasagne}
-\newpage
-\include{tex/dinner/patties}
-\newpage
-\include{tex/dinner/pizza_dough}
-\newpage
-\include{tex/dinner/dumplings} % must go after pizza
-\newpage
-\include{tex/dinner/plackizcukinii}
-\newpage
-\include{tex/dinner/ragu_sauce}
-\newpage
-\include{tex/dinner/pork_loin}
-\newpage
-\include{tex/dinner/stuffed_aubergines}
-\newpage
-\include{tex/dinner/trout}
-\newpage
 
 \section{Party/picnic}
 
