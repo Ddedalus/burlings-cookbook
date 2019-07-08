@@ -10,3 +10,5 @@
 *.fls
 
 *.gz
+
+book/book\.synctex\(busy\)
