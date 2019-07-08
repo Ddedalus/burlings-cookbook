@@ -1,8 +1,10 @@
 \documentclass[%
+titlepage,
+b5paper,
 twoside,
 11pt
-]{article}
-\usepackage[b5paper, margin=0.9in]{geometry} 
+]{book}
+\usepackage[b5paper, margin=0.9in, inner=3cm, outer=2cm]{geometry} 
 
 % encoding, font, language
 \usepackage[T1]{fontenc}
@@ -64,8 +66,27 @@ twoside,
 
 \hbadness=10000	% Ignore underfull boxes
 
+\usepackage{tikz}
+% \usepackage{showframe}
 \usepackage{graphicx}
 \graphicspath{ {./pic/} }
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+% \fancyhead[RO, LE]{\MakeUppercase{\chaptermark}}
 
 \begin{document}
 
@@ -159,8 +180,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \end{table}
 \newpage
 
-\section{Breakfast}
-
+\chapter{Breakfast}
 \include{tex/breakfast/bananabread}
 \newpage
 \include{tex/breakfast/crumpets}
@@ -174,7 +194,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \include{tex/breakfast/sweetomelette}
 \newpage
 
-\section{Lunch}
+\chapter{Lunch}
 
 \include{tex/lunch/broccolipesto}
 \newpage
@@ -191,7 +211,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \include{tex/lunch/vegbake}
 \newpage
 
-\section{Soups}
+\chapter{Soups}
 
 \include{tex/soups/cauliflower_soup}
 \newpage
@@ -205,7 +225,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \newpage
 
 
-\section{Dinner}
+\chapter{Dinner}
 
 \include{tex/dinner/chicken_breast_coconut}
 \newpage
@@ -238,7 +258,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \include{tex/dinner/krokiety}
 \newpage
 
-\section{Desserts}
+\chapter{Desserts}
 \include{tex/desserts/brownie}
 \newpage
 \include{tex/desserts/buns_curd_cheese}
@@ -257,7 +277,7 @@ Grains are staple food. The fact, that most of the people in the UK limit themse
 \newpage
 
 
-\section{Party/picnic}
+\chapter{Party/picnic}
 
 \include{tex/party/asparagustart}
 \newpage
