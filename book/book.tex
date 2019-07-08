@@ -1,89 +1,31 @@
 \documentclass[%
+titlepage,
+b5paper,
 twoside,
 11pt
-]{article}
-\usepackage[b5paper, margin=0.9in]{geometry} 
+]{book}
 
-% encoding, font, language
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
-\usepackage{dirtytalk}
-
-\usepackage[tight, nice]{units}
-
-\usepackage[
-    % handwritten,
-    nowarnings,
-    %myconfig
-]
-{xcookybooky}
-
-\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
-
-\setcounter{secnumdepth}{1}
-\renewcommand*{\recipesection}[2][]
-{%
-    \subsection[#1]{#2}
-}
-\renewcommand{\subsectionmark}[1]
-{% no implementation to display the section name instead
-}
-
-% fix from https://tex.stackexchange.com/a/445886/
-\renewcommand{\step}
-{%
-    \stepcounter{step}%
-    \lettrine
-    [%
-        lines=2,
-        lhang=0,          % space into margin, value between 0 and 1
-        loversize=0.15,   % enlarges the height of the capital
-        slope=0em,
-        findent=1em,      % gap between capital and intended text
-        nindent=0em       % shifts all intended lines, begining with the second line
-    ]{\thestep}{}%
-}
-
-\usepackage{hyperref}    % must be the last package
-\hypersetup{%
-    pdfauthor            = {Magdalena Przybyła, Hubert Bereś},
-    pdftitle             = {Bethan and Hugh's cookbook},
-    pdfstartview         = {FitV},
-    pdfview              = {FitH},
-    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
-    bookmarksopen        = {true},
-    pdfpagetransition    = {Glitter},
-    colorlinks           = {true},
-    linkcolor            = {black},
-    urlcolor             = {blue},
-    citecolor            = {black},
-    filecolor            = {black},
-}
-
-\hbadness=10000	% Ignore underfull boxes
-
-\usepackage{graphicx}
-\graphicspath{ {./pic/} }
+\input{preamble}
 
 \begin{document}
 
-\title{Bethan and Hugh's cookbook}
+\frontmatter
+\title{Bethan and Hugh's Cooking Guide}
 \author{Magdalena Przybyła, Hubert Bereś}
-\maketitle
 
-\begin{abstract}
-    Some initial blah blah.
-\end{abstract}
+\maketitle
+\thispagestyle{empty}
+\newpage
 
 \tableofcontents
 
-\vspace{5em}
+\mainmatter
+\chapter{Introduction}
+
+\include{tex/introduction}
 \newpage
 
-\section{Breakfast}
-
+\chapter{Breakfast}
 \include{tex/breakfast/bananabread}
 \newpage
 \include{tex/breakfast/crumpets}
@@ -97,7 +39,7 @@ twoside,
 \include{tex/breakfast/sweetomelette}
 \newpage
 
-\section{Lunch}
+\chapter{Lunch}
 
 \include{tex/lunch/broccolipesto}
 \newpage
@@ -114,7 +56,7 @@ twoside,
 \include{tex/lunch/vegbake}
 \newpage
 
-\section{Soups}
+\chapter{Soups}
 
 \include{tex/soups/cauliflower_soup}
 \newpage
@@ -128,7 +70,7 @@ twoside,
 \newpage
 
 
-\section{Dinner}
+\chapter{Dinner}
 
 \include{tex/dinner/chicken_breast_coconut}
 \newpage
@@ -161,7 +103,7 @@ twoside,
 \include{tex/dinner/krokiety}
 \newpage
 
-\section{Desserts}
+\chapter{Desserts}
 \include{tex/desserts/brownie}
 \newpage
 \include{tex/desserts/buns_curd_cheese}
@@ -180,7 +122,7 @@ twoside,
 \newpage
 
 
-\section{Party/picnic}
+\chapter{Party/picnic}
 
 \include{tex/party/asparagustart}
 \newpage

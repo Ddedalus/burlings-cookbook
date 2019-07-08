@@ -1,14 +1,24 @@
+\begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-0.9in,yshift=-0.9in,anchor=north east] at (current page.north east){%
+    \includegraphics[width=6cm]{pic/vegeburgers}};
+\end{tikzpicture}
+
+
 \begin{recipe}
     [% 
         preparationtime = {\unit[30]{min}},
         bakingtime = {\unit[30]{min}}
     ]
-    {Best wege patty; Polish edition}
-
+    {Best wege patty \\
+    Polish edition}
+    % TODO: fix indentation
+   \prerecipeoverview{
+       \vspace{5mm}
+   } 
     \setRecipeLengths{
         ingredientswidth=6cm
     }
-    \ingredients{%
+    \ingredients[12]{%
         2 c. & Grated carrot \\
         0.75 c. & Millet \\
         \nicefrac{1}{2} c. & Roast sunflower seed \\
