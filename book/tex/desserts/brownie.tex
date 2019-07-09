@@ -1,3 +1,8 @@
+\begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-0.9in,yshift=-0.8in,anchor=north east] at (current page.north east){%
+    \includegraphics[width=6cm]{pic/brownie}};
+\end{tikzpicture}
+
 \begin{recipe}
     [% 
         preparationtime = {\unit[15]{min}},
@@ -5,6 +10,7 @@
         bakingtime = {\unit[25]{min}}
     ]
     {Aquafaba brownie}
+    \prerecipeoverview{\vspace{5mm}}
     \introduction{%
         Aquafaba is the viscous water from chickpea can.
         Why should you be bothered?
@@ -13,7 +19,7 @@
         Eat chickpea for lunch and aquafaba for afternoon tea - two birds with one stone!
     }
 
-    \ingredients{%
+    \ingredients[10]{%
         \unit[200]{g} & Chocolate \\
         \unit[150]{g} & Butter \\
         1 can & Aquafaba \\
@@ -21,7 +27,7 @@
         1.25 c. & Flour \\
         Pinch & Salt \\
         \nicefrac{1}{4} ts. & Baking powder \\
-        & Chili or cinnamon or vanilla \\
+        & Chili / vanilla / cinnamon  \\
         & Raspberries \\
         & Hazelnuts
     }
@@ -38,7 +44,7 @@
         \step Gently, in portions, add flour to liquid and stir with a spatula.
 
         \step Pour cake batter to a baking tin (small, something like 20x25) lined with parchment.
-        Decorate with nuts, raspberries and pieces of chocolate.
+        Decorate with nuts, raspberries and chocolate.
 
         \step Bake at \unit[180]{\textcelcius} for 20 min.
         Do not overbake!
@@ -49,8 +55,3 @@
     }
 
 \end{recipe}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=8cm]{pic/brownie}
-\end{figure}
